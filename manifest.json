@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+
+    "name": "Just Show Private",
+    "description": "This extension hides public/third person posts from your Facebook news feed. We respect your privacy and do not use/store/outsource any data.",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Just Show Private"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "*://*.facebook.com/*",
+        "storage"
+    ],
+    "background": {
+        "scripts": ["jquery-3.1.1.min.js", "background.js"],
+        "persistent": false
+    }
+    // ,
+    // "content_scripts": [{
+    //     "matches": [
+    //         "*://*.facebook.com/*"
+    //     ],
+    //     "js": ["jquery-3.2.0.min.js", "content.js", "bootstrap.min.js", "popup.js"]
+    // }]
+}
